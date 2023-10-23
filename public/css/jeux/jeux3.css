@@ -1,0 +1,55 @@
+body {
+  background-color: #000;
+  color: #0f0;
+  font-family: "Courier New", monospace;
+}
+
+.glassmorphism-card {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin: 0 auto;
+}
+
+.jeux3 {
+  text-align: center;
+}
+
+.code-source pre {
+  white-space: pre-wrap;
+}
+
+.form-group {
+  margin-top: 20px;
+  text-align: center;
+  color: #0f0;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+button.btn.btn-primary {
+  padding: 10px 20px;
+  background-color: #007f00;
+  color: #0f0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.btn.btn-primary:hover {
+  background-color: #005600;
+}
+
+.suivant {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,47 @@
+body {
+  background-image: url("../img/bg3.jpg");
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: lime;
+}
+
+.notice {
+  background-color: #a3eb8733;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: aliceblue;
+  font-size: 2em;
+}
+
+.notice h1 {
+  font-size: 24px;
+}
+
+.infos h3 {
+  font-size: 20px;
+  color: #007bff;
+}
+
+.infos p {
+  font-size: 16px;
+
+  margin-top: 10px;
+}
+
+/* Media queries pour les écrans plus petits */
+@media screen and (max-width: 768px) {
+  .reponse1 {
+    width: 95%; /* Ajustez la largeur au besoin pour les petits écrans */
+  }
+}

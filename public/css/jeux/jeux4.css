@@ -1,0 +1,87 @@
+body {
+  background-image: url("../../img/bg3.jpg");
+  background-size: cover; /* Couvrir toute la zone visible */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #00ff00; /* Couleur du texte (vert vif) */
+  font-family: "Courier New", monospace; /* Police de caractères monospace pour un look de terminal */
+}
+
+body {
+  background-color: #000;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: lime;
+  font-family: "Courier New", monospace;
+}
+
+.jeux4 {
+  text-align: center;
+  color: lime;
+  margin-top: 2em;
+}
+
+.glassmorphism-card {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #0f0;
+}
+
+.hacker-text {
+  font-size: 18px;
+  text-align: left;
+  margin: 20px;
+  padding: 10px;
+}
+
+.hacker-code {
+  display: block;
+  color: rgb(158, 30, 184);
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Styles pour la section "recherches" */
+.hacker1-container {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  backdrop-filter: blur(10px);
+  color: lime;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.hacker1-title {
+  color: red; /* Couleur du titre "Dark Cipher s'amuse avec vous!!!" */
+}
+
+.hacker1-text {
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+}
+
+.hacker1-image {
+  width: 30%; /* Ajustez la largeur au besoin */
+  margin-top: 1em;
+}
+
+.alert-container {
+  max-width: 400px; /* Largeur maximale */
+  padding: 20px;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.highlight {
+  color: red; /* Couleur que vous préférez */
+  font-weight: bold; /* Style de police en gras, si nécessaire */
+  font-size: 2em;
+}

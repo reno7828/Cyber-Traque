@@ -1,0 +1,94 @@
+body {
+  background-color: #000;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: lime; /* Couleur du texte */
+  font-family: "Courier New", monospace; /* Police de caractères de style "hacker" */
+}
+
+.jeux1 {
+  text-align: center;
+  color: lime;
+  margin-top: 2em;
+}
+
+.password-container {
+  color: black;
+  margin-top: 5em;
+  margin-left: 5em;
+}
+
+.reponse1 {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #0f0; /* Couleur de la bordure verte */
+  border-radius: 5px;
+  width: 50%;
+  margin-top: 10em;
+}
+
+.alert {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.alert.alert-success {
+  background-color: #000; /* Fond noir pour l'alerte de succès */
+  color: lime; /* Texte vert pour l'alerte de succès */
+}
+
+.alert.alert-danger {
+  background-color: #f00; /* Fond rouge pour l'alerte d'erreur */
+  color: #000; /* Texte noir pour l'alerte d'erreur */
+}
+
+form {
+  margin-top: 20px;
+  color: lime;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #0f0; /* Bordure verte pour les champs de formulaire */
+  border-radius: 5px;
+  color: #0f0; /* Texte vert pour les champs de formulaire */
+  background-color: #000; /* Fond noir pour les champs de formulaire */
+}
+
+button.btn.btn-primary {
+  padding: 10px 20px;
+  background-color: lime; /* Bouton rouge */
+  color: #000; /* Texte noir pour le bouton */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.btn.btn-primary:hover {
+  background-color: #ff0; /* Changement de couleur au survol */
+  color: #000;
+}
+
+.suivant {
+  margin-left: 20em;
+}
+
+.hidden-text {
+  color: transparent;
+}
+
+.password-container:active .hidden-text {
+  color: black; /* La couleur du texte quand l'utilisateur clique dessus */
+}

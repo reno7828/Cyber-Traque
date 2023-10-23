@@ -1,0 +1,54 @@
+body {
+  background-image: url("../img/bg3.jpg");
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.register {
+  margin-top: 20em;
+}
+
+.card.glassmorphism {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 0 auto;
+  color: rgb(30, 219, 24);
+}
+
+/* Style pour le titre de la card */
+.card.glassmorphism .card-title {
+  font-size: 24px; /* Taille de la police du titre */
+  margin-bottom: 20px; /* Espace en bas du titre */
+}
+
+/* Style pour les champs du formulaire */
+.card.glassmorphism .form-group {
+  margin-bottom: 15px; /* Espace entre les champs du formulaire */
+}
+
+/* Style pour le bouton */
+.card.glassmorphism .btn-primary {
+  background-color: #007bff; /* Couleur de fond du bouton */
+  border: none; /* Supprime la bordure */
+}
+
+/* Style pour le texte du bouton */
+.card.glassmorphism .btn-primary span {
+  color: #fff; /* Couleur du texte du bouton */
+}
+
+/* Style pour le bouton au survol */
+.card.glassmorphism .btn-primary:hover {
+  background-color: #0056b3; /* Couleur de fond au survol */
+}
+
+/* Media queries pour les écrans plus petits */
+@media screen and (max-width: 768px) {
+  .reponse1 {
+    width: 95%; /* Ajustez la largeur au besoin pour les petits écrans */
+  }
+}

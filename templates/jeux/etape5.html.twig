@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Étape 5{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/jeux/jeux5.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    <audio autoplay loop id='audio'>
+        <source src="{{ asset('music/etape5.mp3') }}" type="audio/mpeg">
+        Votre navigateur ne supporte pas l'élément audio.
+    </audio>
+
+    <button id="audio-toggle" class="btn1 btn-primary">Désactiver le son</button>
+
+    {% if app.user.isVerified == 1 %}
+        <h1>Dark Cipher se cache à Moscou!!</h1>
+        <br>
+        <p>Il nous à même dit qu'il était sur une île de rêve... Mais qu'est-ce que cela peut vouloir dire...</p>
+        <br>
+        <p>Essayons de le trouver dans Moscou : <a href="https://www.google.fr/maps/place/Moscou,+Russie/@55.7438983,37.5081172,16606m/data=!3m1!1e3!4m6!3m5!1s0x46b54afc73d4b0c9:0x3d44d6cc5757cf4c!8m2!3d55.755826!4d37.6172999!16zL20vMDRzd2Q?entry=ttu" target='blank'>ICI</a></p>
+    {% else %}
+        <h1>Veuillez valider votre email en cliquant sur le lien envoyé.</h1>
+    {% endif %}
+
+{% endblock %}

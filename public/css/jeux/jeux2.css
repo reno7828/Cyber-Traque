@@ -1,0 +1,71 @@
+body {
+  background-image: url("../../img/bg3.jpg");
+  background-size: cover; /* Couvrir toute la zone visible */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #00ff00; /* Couleur du texte (vert vif) */
+  font-family: "Courier New", monospace; /* Police de caractères monospace pour un look de terminal */
+}
+
+.glassmorphism-card {
+  background: rgba(0, 0, 0, 0.8); /* Fond sombre légèrement transparent */
+  border: 1px solid #00ff00; /* Bordure verte */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px; /* Ajustez la largeur maximale au besoin */
+  margin: 0 auto;
+  margin-top: 2em;
+}
+
+.jeux2 {
+  text-align: center;
+  color: #00ff00; /* Couleur du texte (vert vif) */
+  font-size: 24px; /* Taille de la police plus grande */
+}
+
+.photo {
+  text-align: center;
+  color: #00ff00; /* Couleur du texte (vert vif) */
+}
+
+.image img {
+  width: 100%;
+  max-width: 400px; /* Ajustez la largeur maximale au besoin */
+}
+
+.form-group {
+  margin-top: 20px;
+  text-align: center;
+  color: #00ff00; /* Couleur du texte (vert vif) */
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+button.btn.btn-primary {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #00ff00; /* Texte en vert vif */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.btn.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.suivant {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.image img {
+  width: 100%;
+  max-width: 200px; /* Ajustez la largeur maximale au besoin */
+  height: auto;
+}

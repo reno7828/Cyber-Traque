@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Étape 3{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/jeux/jeux3.css') }}">
+{% endblock %}
+
+{% block body %}
+<audio autoplay id='audio'>
+        <source src="{{ asset('music/etape3.mp3') }}" type="audio/mpeg">
+        Votre navigateur ne supporte pas l'élément audio.
+      </audio>
+
+      <button id="audio-toggle" class="btn btn-primary">Désactiver le son</button>
+    {% if app.user.isVerified == 1 %}
+        <div class="glassmorphism-card">
+            <div class="jeux3">
+                <h1>Énigme 3 : Trouvez l'indice caché dans le code source</h1>
+                <p>
+                    Voici une page mystérieuse envoyé par Dark Cipher. Les réponses se cachent dans le code source. 
+                    Vous devez trouver l'indice pour avancer à l'étape suivante.
+                </p>
+            </div>
+
+  
+
+            <div class="indice hidden"><!-- 
+            
+            Vous avez trouvé ma page cachée !
+            Mais saurez-vous trouver le mot de passe... Même César n'aurait pas pu le déchiffrer même si il savait que la clef était ->23...
+
+            Indice : zovmqldrxoa -->
+            </div>
+
+
+            {% if isCorrect %}
+                <div class="alert alert-success">
+                    Bravo ! Vous avez trouvé l'indice : {{ secretCode }}
+                </div>
+            {% elseif isSubmitted %}
+                <div class="alert alert-danger">
+                    Désolé, la réponse est incorrecte. Essayez à nouveau.
+                </div>
+            {% endif %}
+            <form method="post" action="{{ path('jeux_etape3') }}">
+                <div class="form-group">
+                    <h4>Entrez l'indice caché :</h4>
+                    <label for="response">Votre réponse :</label>
+                    <input type="text" id="response" name="response" class="form-control" required>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Vérifier</button>
+            </form>
+            {% if isCorrect %}
+                <div class="suivant">
+                    <a href="{{ path('jeux_etape4') }}" class="btn btn-primary">Étape suivante...</a>
+                </div>
+            {% endif %}
+        </div>
+    {% else %}
+        <h1>Veuillez valider votre email en cliquant sur le lien envoyé.</h1>
+    {% endif %}
+{% endblock %}

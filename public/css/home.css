@@ -1,0 +1,56 @@
+body {
+  background-image: url("../img/bg3.jpg");
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: "Courier New", monospace;
+}
+
+/* Style général de la page */
+.bienvenue {
+  text-align: center;
+  color: aliceblue;
+}
+
+.hacker-card {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 0 auto;
+  backdrop-filter: blur(10px);
+  margin-top: 2em;
+}
+
+/* Style pour le texte "Que la traque commence!" */
+.hacker-text {
+  color: lime;
+}
+
+/* Style pour les boutons */
+.hacker-button {
+  text-decoration: none;
+  color: #fff;
+  background-color: #84f07570;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Style pour les boutons au survol */
+.hacker-button:hover {
+  background-color: #b3ec56a2;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+}
+
+/* Media queries pour les écrans plus petits */
+@media screen and (max-width: 768px) {
+  .reponse1 {
+    width: 95%; /* Ajustez la largeur au besoin pour les petits écrans */
+  }
+}

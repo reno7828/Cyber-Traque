@@ -1,0 +1,47 @@
+body {
+  background-image: url("../../img/bg3.jpg");
+  background-size: cover; /* Couvrir toute la zone visible */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #00ff00; /* Couleur du texte (vert vif) */
+  font-family: "Courier New", monospace; /* Police de caractères monospace pour un look de terminal */
+}
+
+h1 {
+  font-size: 24px;
+  color: #0f0;
+  margin-top: 20px;
+}
+
+p {
+  font-size: 18px;
+  color: #0f0;
+}
+
+a {
+  color: #0f0;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff0;
+}
+
+.btn-primary {
+  background-color: lime;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  border: 2px solid #0f0; /* Ajout d'une bordure verte */
+  box-shadow: 0 0 5px #0f0; /* Ombre autour du bouton */
+}
+
+.btn-primary:hover {
+  background-color: #ff0;
+  color: #000;
+  border: 2px solid #ff0;
+  box-shadow: 0 0 5px #ff0;
+}

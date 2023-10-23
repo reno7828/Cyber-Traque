@@ -1,0 +1,120 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Étape 4{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/jeux/jeux4.css') }}">
+{% endblock %}
+
+{% block body %}
+    <audio autoplay loop id='audio'>
+        <source src="{{ asset('music/etape4.mp3') }}" type="audio/mpeg">
+        Votre navigateur ne supporte pas l'élément audio.
+    </audio>
+
+    <button id="audio-toggle" class="btn btn-primary">Désactiver le son</button>
+
+    {% if app.user.isVerified == 1 %}
+        <div class="glassmorphism-card">
+            <div class="jeux4">
+                <h1>CONNEXION ÉTABLIE</h1>
+                <p class="hacker-text">
+                    Accès autorisé. Séquence de décodage en cours...
+                    <br>
+                    <br>
+                    <span class="hacker-code">
+                        >_ ÉTAPE 4 : LOCALISATION DE CRYPTOGUARD
+                    </span>
+                    <br>
+                    <span class="hacker-code">
+                        >_ INITIALIZATION RÉUSSIE
+                    </span>
+                    <br>
+                    <span class="hacker-code">
+                        >_ Votre mission : Découvrir l'emplacement de Cryptoguard.
+                    </span>
+                    <br>
+                    <span class="hacker-code">
+                        >_ Cryptoguard, le bouclier de l'ombre.
+                    </span>
+                    <br>                
+                
+                    <span class="hacker-code">
+                        >_ Indice initial : Cherchez un lieu fortement sécurisé.
+                    </span>
+                    <br>
+               
+                </p>
+            </div>
+        </div>
+
+
+     <div class="recherches hacker1-container">
+        <h2 class="hacker1-title">Dark Cipher s'amuse avec vous!!!</h2>
+        <br>
+        <p class="hacker1-text">Pour vous humilier un peu plus, il vous a envoyé une photo de lui... Inspectez la photo sous tous les angles!! Et trouvé le lieux ou se cache Dark Cipher</p> <span class="highlight">EX</span> aminez chaque mot<span class="highlight">IF</span> avec soin. 
+        <br>
+        <img src="{{ asset('img/dark.jpg') }}" alt="image d'homme masqué!!" class="hacker1-image">
+    </div>
+
+    <div class="d-flex justify-content-center">
+    <div class="alert alert-container">
+        {% if isCorrect %}
+            <div class="alert alert-success">
+                Bravo ! Vous avez trouvé l'indice : {{ secretCode }}, Dark Cipher nous dit y vivre sur une île de rêve...
+            </div>
+        {% elseif isSubmitted %}
+            <div class="alert alert-danger">
+                Désolé, la réponse est incorrecte. Essayez à nouveau.
+            </div>
+        {% endif %}
+        <form method="post" action="{{ path('jeux_etape4') }}">
+            <div class="form-group">
+                <h4><strong>Entrez le lieux ou se cache Dark Cipher :</strong></h4>
+                <label for="response">Votre réponse :</label>
+                <input type="text" id="response" name="response" class="form-control" required>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Vérifier</button>
+        </form>
+        {% if isCorrect %}
+        <br>
+            <div class="suivant">
+                <a href="{{ path('jeux_etape5') }}" class="btn btn-primary">Étape suivante...</a>
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+
+
+
+
+    {% else %}
+        <h1>Veuillez valider votre email en cliquant sur le lien envoyé.</h1>
+    {% endif %}
+
+    <script>
+    // Fonction pour afficher le texte progressivement
+    function displayText(element, text, speed) {
+        let index = 0;
+        const timer = setInterval(function () {
+            element.innerHTML += text[index];
+            index++;
+            if (index === text.length) {
+                clearInterval(timer);
+            }
+        }, speed);
+    }
+
+    // Appel de la fonction pour chaque élément de classe "hacker-code"
+    const hackerCodeElements = document.querySelectorAll(".hacker-code");
+    const speed = 50; // Vitesse d'affichage, vous pouvez ajuster la valeur
+
+    hackerCodeElements.forEach(function (element) {
+        displayText(element, element.textContent, speed);
+    });
+</script>
+
+{% endblock %}
+
