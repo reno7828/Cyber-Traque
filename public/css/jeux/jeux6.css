@@ -1,0 +1,8 @@
+body {
+  background-image: url("../../img/bg3.jpg");
+  background-size: cover; /* Couvrir toute la zone visible */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #00ff00; /* Couleur du texte (vert vif) */
+  font-family: "Courier New", monospace; /* Police de caractères monospace pour un look de terminal */
+}

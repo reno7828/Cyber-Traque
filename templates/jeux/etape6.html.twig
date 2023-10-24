@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Étape 5{% endblock %}
+{% block title %}Étape 6{% endblock %}
 
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('css/jeux/jeux5.css') }}">
@@ -18,11 +18,11 @@
     {% if app.user.isVerified == 1 %}
    <div class="hacker-frame">
     <div class="hacker-content">
-        <h1>Dark Cipher se cache à Moscou!!</h1>
+        <h1>Dream Island!!!</h1>
         <br>
-        <p>Il nous a même dit qu'il était sur une île de rêve... Mais qu'est-ce que cela peut vouloir dire...</p>
+        <p>Dark Cipher se cache à Dream Island, mais c'est tres grand! Encore une fois Dark Cipher nous nargue en nous donnant un indice pour le trouver : claquant.diadème.aliénons</p>
         <br>
-        <p>Essayons de le trouver dans Moscou : <a href="https://www.google.fr/maps/place/Moscou,+Russie/@55.7438983,37.5081172,16606m/data=!3m1!1e3!4m6!3m5!1s0x46b54afc73d4b0c9:0x3d44d6cc5757cf4c!8m2!3d55.755826!4d37.6172999!16zL20vMDRzd2Q?entry=ttu" target='blank'>ICI</a></p>
+       
     </div>
 </div>
 
@@ -40,10 +40,10 @@
             {% endif %}
 
         <div class="hacker-frame">
-    <form method="post" action="{{ path('jeux_etape5') }}">
+    <form method="post" action="{{ path('jeux_etape6') }}">
         <div class="form-group">
-            <h4>Où se trouve Dark Cipher ? Avez-vous trouvé ? :</h4>
-            <label for="response">Votre réponse (au format "bonjour-patron") :</label>
+            <h4>Où se trouve Dark Cipher ? :</h4>
+            <label for="response">Votre réponse :</label>
             <input type="text" id="response" name="response" class="form-control" required>
         </div>
         <br>
@@ -53,7 +53,7 @@
 
             {% if isCorrect %}
                 <div class="suivant">
-                    <a href="{{ path('jeux_etape6') }}" class="btn btn-primary">Étape suivante...</a>
+                    <a href="{{ path('jeux_etape5') }}" class="btn btn-primary">Étape suivante...</a>
                 </div>
             {% endif %}
         </div>
