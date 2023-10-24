@@ -101,10 +101,24 @@ class JeuxController extends AbstractController
     #[Route('/jeux/etape5', name: 'jeux_etape5')]
     public function etape5(Request $request): Response
     {
+         // Définissez un code secret pour l'étape 3
+         $secretCode = 'dream-island'; // Remplacez par votre code secret
+        
+         $userResponse = $request->request->get('response');
+         $isSubmitted = $request->isMethod('POST'); // Vérifie si la requête est de type POST
+     
+          // Convertir la réponse de l'utilisateur et le code secret en minuscules
+         $userResponse = strtolower($userResponse);
+         $secretCode = strtolower($secretCode);
+ 
+         // Vérifie si la réponse de l'utilisateur est correcte
+         $isCorrect = ($userResponse === $secretCode);
        
 
         return $this->render('jeux/etape5.html.twig', [
-           
+            'secretCode' => $secretCode,
+            'isCorrect' => $isCorrect,
+            'isSubmitted' => $isSubmitted,
         ]);
     }
 

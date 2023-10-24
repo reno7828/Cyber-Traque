@@ -16,11 +16,47 @@
     <button id="audio-toggle" class="btn1 btn-primary">Désactiver le son</button>
 
     {% if app.user.isVerified == 1 %}
+   <div class="hacker-frame">
+    <div class="hacker-content">
         <h1>Dark Cipher se cache à Moscou!!</h1>
         <br>
-        <p>Il nous à même dit qu'il était sur une île de rêve... Mais qu'est-ce que cela peut vouloir dire...</p>
+        <p>Il nous a même dit qu'il était sur une île de rêve... Mais qu'est-ce que cela peut vouloir dire...</p>
         <br>
         <p>Essayons de le trouver dans Moscou : <a href="https://www.google.fr/maps/place/Moscou,+Russie/@55.7438983,37.5081172,16606m/data=!3m1!1e3!4m6!3m5!1s0x46b54afc73d4b0c9:0x3d44d6cc5757cf4c!8m2!3d55.755826!4d37.6172999!16zL20vMDRzd2Q?entry=ttu" target='blank'>ICI</a></p>
+    </div>
+</div>
+
+
+
+
+            {% if isCorrect %}
+                <div class="alert alert-success hacker-text">
+                    Bravo ! Vous avez trouvé l'indice : {{ secretCode }}
+                </div>
+            {% elseif isSubmitted %}
+                <div class="alert alert-danger hacker-text">
+                    Désolé, la réponse est incorrecte. Essayez à nouveau.
+                </div>
+            {% endif %}
+
+        <div class="hacker-frame">
+    <form method="post" action="{{ path('jeux_etape5') }}">
+        <div class="form-group">
+            <h4>Où se trouve Dark Cipher ? Avez-vous trouvé ? :</h4>
+            <label for="response">Votre réponse (au format "bonjour-patron") :</label>
+            <input type="text" id="response" name="response" class="form-control" required>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Vérifier</button>
+    </form>
+</div>
+
+            {% if isCorrect %}
+                <div class="suivant">
+                    <a href="{{ path('jeux_etape5') }}" class="btn btn-primary">Étape suivante...</a>
+                </div>
+            {% endif %}
+        </div>
     {% else %}
         <h1>Veuillez valider votre email en cliquant sur le lien envoyé.</h1>
     {% endif %}

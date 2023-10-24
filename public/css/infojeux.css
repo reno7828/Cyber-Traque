@@ -20,7 +20,7 @@ body {
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: aliceblue;
+  color: lime;
   font-size: 2em;
 }
 
@@ -30,7 +30,7 @@ body {
 
 .infos h3 {
   font-size: 20px;
-  color: #007bff;
+  color: lime;
 }
 
 .infos p {

@@ -45,3 +45,82 @@ a:hover {
   border: 2px solid #ff0;
   box-shadow: 0 0 5px #ff0;
 }
+
+.hacker-frame {
+  border: 3px solid #00ff00; /* Bordure verte */
+  padding: 20px;
+  margin: 20px;
+  background-color: #000; /* Fond noir */
+  box-shadow: 0 0 10px #0f0; /* Ombre verte */
+}
+
+.hacker-content {
+  color: #00ff00; /* Texte vert */
+  font-family: "Courier New", monospace;
+}
+
+.hacker-content h1 {
+  font-size: 24px;
+}
+
+.hacker-content p {
+  font-size: 18px;
+}
+
+.hacker-content a {
+  color: #00ff00;
+  text-decoration: none;
+}
+
+.hacker-content a:hover {
+  color: #ff0;
+}
+
+.hacker-frame {
+  border: 3px solid #00ff00; /* Bordure verte */
+  padding: 20px;
+  margin: 20px;
+  background-color: #00000075; /* Fond noir */
+  box-shadow: 0 0 10px #0f0; /* Ombre verte */
+}
+
+.hacker-frame h4 {
+  color: #0f0; /* Texte vert */
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.hacker-frame label {
+  color: #00ff00; /* Texte vert clair */
+}
+
+.hacker-frame input {
+  background-color: #000;
+  color: #00ff00; /* Texte vert clair */
+  border: 2px solid #00ff00; /* Bordure verte */
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.hacker-frame input:focus {
+  outline: none; /* Supprimer l'effet de focus */
+}
+
+.hacker-frame button {
+  background-color: lime;
+  color: #000000ee;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  border: 2px solid #0f0; /* Bordure verte */
+  box-shadow: 0 0 5px #0f0; /* Ombre verte */
+}
+
+.hacker-frame button:hover {
+  background-color: #ff0;
+  color: #000;
+  border: 2px solid #ff0;
+  box-shadow: 0 0 5px #ff0;
+}
