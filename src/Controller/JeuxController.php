@@ -6,6 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\JsonResponse;
+
 
 class JeuxController extends AbstractController
 {
@@ -145,6 +147,66 @@ class JeuxController extends AbstractController
             'isSubmitted' => $isSubmitted,
         ]);
     }
+
+    #[Route('/jeux/etape7', name: 'jeux_etape7')]
+    public function etape7(Request $request): Response
+    {
+        // Définissez le mot de passe correct pour l'étape 7
+        $correctPassword = '123456789'; // Remplacez par votre mot de passe correct
+
+        $userResponse = $request->request->get('response');
+        $isSubmitted = $request->isMethod('POST'); // Vérifie si la requête est de type POST
+
+        // Vérifie si la réponse de l'utilisateur est correcte
+        $isCorrect = false;
+
+        if ($isSubmitted) {
+            // Convertir la réponse de l'utilisateur et le mot de passe correct en minuscules
+            $userResponse = strtolower($userResponse);
+            $correctPassword = strtolower($correctPassword);
+
+            // Vérifie si la réponse de l'utilisateur est correcte
+            $isCorrect = ($userResponse === $correctPassword);
+        }
+
+        // Renvoie la vue Twig directement
+        return $this->render('jeux/etape7.html.twig', [
+            'isCorrect' => $isCorrect,
+            'isSubmitted' => $isSubmitted,
+            'correctPassword' =>$correctPassword,
+        ]);
+    }
+
+
+    #[Route('/jeux/etape8', name: 'jeux_etape8')]
+    public function etape8(Request $request): Response
+    {
+        // Définissez le mot de passe correct pour l'étape 7
+        $correctPassword = '123456789'; // Remplacez par votre mot de passe correct
+
+        $userResponse = $request->request->get('response');
+        $isSubmitted = $request->isMethod('POST'); // Vérifie si la requête est de type POST
+
+        // Vérifie si la réponse de l'utilisateur est correcte
+        $isCorrect = false;
+
+        if ($isSubmitted) {
+            // Convertir la réponse de l'utilisateur et le mot de passe correct en minuscules
+            $userResponse = strtolower($userResponse);
+            $correctPassword = strtolower($correctPassword);
+
+            // Vérifie si la réponse de l'utilisateur est correcte
+            $isCorrect = ($userResponse === $correctPassword);
+        }
+
+        // Renvoie la vue Twig directement
+        return $this->render('jeux/etape8.html.twig', [
+            'isCorrect' => $isCorrect,
+            'isSubmitted' => $isSubmitted,
+            'correctPassword' => $correctPassword,
+        ]);
+    }
+
 
 
 

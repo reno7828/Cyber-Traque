@@ -42,7 +42,16 @@
             <li><a class="dropdown-item" href="https://www.dcode.fr/" target="blank">Dcode</a></li>
             <li><a class="dropdown-item" href="https://onlineexifviewer.com/" target="blank">Exif</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="https://what3words.com/gardon.hangar.enserrer" target='blank'>What3Words</a></li>
+            <li>
+              <a class="dropdown-item" href="https://what3words.com/gardon.hangar.enserrer" target='blank'>What3Words</a>
+            </li>
+
+            <li>
+                <a class="dropdown-item" href="https://hashes.com/en/tools/hash_identifier" target="blank">Hash Identifier</a>
+
+            </li>
+
+           
           </ul>
         </li>
         <li class="nav-item">
@@ -62,5 +71,8 @@
 </nav>
         {% block body %}{% endblock %}
         <script src="{{ asset('js/audio-control.js') }}"></script>
+        <script src="{{ asset('vendor/components/jquery/jquery.min.js') }}"></script>
+
+
     </body>
 </html>

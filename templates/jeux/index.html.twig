@@ -13,23 +13,41 @@
 {% endblock %}
 
 {% block body %}
-<audio autoplay id='audio'>
-        <source src="{{ asset('music/etape1.mp3') }}" type="audio/mpeg">
-        Votre navigateur ne supporte pas l'élément audio.
-      </audio>
 
-      <button id="audio-toggle" class="btn btn-primary">Désactiver le son</button>
-    <div class="jeux1">
-        <h1>Agent {{app.user.username}}</h1>
-        <h1>Un code secret se cache sur cette page, trouvez-le et entrez votre réponse !</h1>
-    </div>
 
-    <div class="password-container">
-        <p>
-            Tiens, tiens, un code secret... 
-            Il a l'air simple... <span id="secret-text">123456</span>
-        </p>
-    </div>
+
+{% if app.user.isVerified == 1%}
+
+
+    <audio autoplay id='audio'>
+            <source src="{{ asset('music/etape1.mp3') }}" type="audio/mpeg">
+            Votre navigateur ne supporte pas l'élément audio.
+        </audio>
+
+        <button id="audio-toggle" class="btn btn-primary">Désactiver le son</button>
+        <div class="jeux1">
+            <h1>Agent {{app.user.username}}</h1>
+            <h1>Un code secret se cache sur cette page, trouvez-le et entrez votre réponse !</h1>
+            <br>
+
+            <p>Dans l'obscurité, des informations peuvent être dissimulées ou révélées...</p></p>
+
+        </div>
+
+        <div class="password-container">
+            <p>
+                Tiens, tiens, un code secret... 
+                Il a l'air simple... <span id="secret-text">123456</span>
+            </p>
+            <br>
+           
+
+        </div>
+{% else %}
+
+    <h1>Veuillez verfier votre adresse mail pour continuer...</h1>
+
+{% endif %}
 
 
 

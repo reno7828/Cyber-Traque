@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Étape 8
+{% endblock %}
+
+{% block stylesheets %}
+	<link
+	rel="stylesheet" href="{{ asset('css/jeux/jeux5.css') }}">
+	<!-- Ajoute le lien vers le fichier Bootstrap CSS si ce n'est pas déjà fait -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{% endblock %}
+
+{% block body %}
+	<audio autoplay loop id="audio">
+		<source src="{{ asset('music/etape5.mp3') }}" type="audio/mpeg">
+		Votre navigateur ne supporte pas l'élément audio.
+	</audio>
+
+	<button id="audio-toggle" class="btn1 btn-primary">Désactiver le son</button>
+
+	{% if app.user.isVerified == 1 %}
+		<div class="hacker-frame">
+			<div class="hacker-content">
+				<h1>Etape 8</h1>
+				<br>
+				<p>Féllicitation vous avez réussi!!!</p>
+				<br>
+				<p>Dark Cipher est derriere les barreaux!!!</p>
+			</div>
+		</div>
+
+		<div class="image" style="text-align: center;">
+			<img src="{{ asset('/img/menotte.jpg') }}" alt="bandit menotté" style="max-width: 30%; height: auto; margin: 0 auto;">
+		</div>
+
+
+
+	{% else %}
+		<h1>Veuillez valider votre email en cliquant sur le lien envoyé.</h1>
+	{% endif %}
+{% endblock %}
+

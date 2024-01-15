@@ -1,0 +1,89 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Étape 7
+{% endblock %}
+
+{% block stylesheets %}
+	<link
+	rel="stylesheet" href="{{ asset('css/jeux/jeux5.css') }}">
+	<!-- Ajoute le lien vers le fichier Bootstrap CSS si ce n'est pas déjà fait -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{% endblock %}
+
+{% block body %}
+	<audio autoplay loop id='audio'>
+		<source src="{{ asset('music/etape5.mp3') }}" type="audio/mpeg">
+		Votre navigateur ne supporte pas l'élément audio.
+	</audio>
+
+	<button id="audio-toggle" class="btn1 btn-primary">Désactiver le son</button>
+
+	{% if app.user.isVerified == 1 %}
+		<div class="hacker-frame">
+			<div class="hacker-content">
+				<h1>Etape 7</h1>
+				<br>
+				<p>La partie n'est pas encore gagnée!!</p>
+				<br>
+				<p>Il est temps d'en terminer avec lui !! Déchiffrez son mot de passe pour annuler toute son opération.</p>
+				<p>Seulement nous avons un problème... il est chiffré!! 
+					                    Essayez de déchiffrer son mot de passe le plus rapidement possible!!</p>
+				<p>mdp = 25f9e794323b453885f5181f1b624d0b   Il faut identifier ce hash!!!</p>
+			</div>
+		</div>
+
+	
+
+		<div class='hacker-frame'>
+
+			{% if isCorrect %}
+				<div class="alert alert-success hacker-text">
+					Bravo ! Vous avez trouvé le mot de passe!!! :
+					{{ correctPassword }}
+				</div>
+			{% elseif isSubmitted %}
+				<div class="alert alert-danger hacker-text">
+					Désolé, la réponse est incorrecte. Essayez à nouveau.
+				</div>
+			{% endif %}
+
+
+
+			<form method="post" action="{{ path('jeux_etape7') }}" onsubmit="stopTimer()" id="myForm">
+				<div class="form-group">
+					<h4>Quel est le mot de passe de Dark Cipher ? :</h4>
+					<label for="response">Votre réponse :</label>
+					<input type="text" id="response" name="response" class="form-control" required>
+				</div>
+				<br>
+				<button type="submit" class="btn btn-primary">Vérifier</button>
+			</form>
+
+			<!-- Ajout de la zone pour afficher le message d'erreur -->
+			<div id="error-message" class="text-danger"></div>
+		</div>
+		{% if isCorrect %}
+						<div class="suivant">
+
+						<script>
+								window.location.href = "{{ path('jeux_etape8') }}";
+						</script>
+						</div>
+					{% endif %}
+				</div>
+			{% else %}
+				<h1>Veuillez valider votre email en cliquant sur le lien envoyé.</h1>
+			{% endif %}
+
+
+
+
+
+
+
+
+
+
+	
+{% endblock %}
+
